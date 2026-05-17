@@ -1,0 +1,12 @@
+extends CanvasLayer
+
+@onready var money = $Money
+@onready var rep = $Rep
+@onready var energy = $Energy
+@onready var wanted = $Wanted
+
+func _process(delta):
+    money.text = "Money: " + str(GameManager.money)
+    rep.text = "Rep: " + str(GameManager.rep)
+    energy.text = "Energy: " + str(GameManager.energy)
+    wanted.text = "Wanted: " + str(GameManager.wanted_level)
